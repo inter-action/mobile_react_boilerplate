@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+.idea
+npm-debug.log
+build/
+.nvmrc
+package-lock.json
+yarn.lock
+todo.txt
+.DS_Store
+

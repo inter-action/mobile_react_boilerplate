@@ -1,0 +1,17 @@
+{
+  "extends": ["eslint:recommended"],
+  "parser": "babel-eslint",
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "no-empty": 1,
+    "no-console": 0,
+    "no-unused-vars": [1, { "argsIgnorePattern": "^_" }]
+  },
+  "globals": {
+    "test": true
+  }
+}
