@@ -2,7 +2,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractText = new ExtractTextPlugin('[name].[chunkhash].css')
-
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const config = require('./webpack.config')
 
 
@@ -37,10 +37,11 @@ module.exports = merge(config, {
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest'],
     }),
-    // new webpack.DefinePlugin({
-    //   'process.env': {
-    //     NODE_ENV: JSON.stringify('production'),
-    //   },
-    // }),
+    new UglifyJSPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
   ]
 })
