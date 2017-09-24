@@ -1,4 +1,92 @@
 
-.PageIndex{
-  color: red; 
+.page-home {
+  color: red;
+  height: 100vh;
+  position: relative;
+  color: #2395ff;
+  
+
+  .bg {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    > div:first-child {
+      height: 270px;
+      background-image: url('./assets/banner.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    > div:last-child{
+      flex: 1;
+      background-image: linear-gradient(to bottom, #ffffff, #f2fbff);
+      background-size: contain;
+      
+      >div{
+        margin-top: 100px;
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+
+  .scan {
+    position: absolute;
+    top: 270px;
+    transform: translateY(-50%);
+    width: 100%;
+
+    .ring0{
+      width: 140px; height: 140px;
+      background-image: url('./assets/ring0.svg');
+      background-size: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .ring1{
+      width: 108px; height: 108px;
+      background-image: url('./assets/ring1.svg');
+      background-size: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ring2{
+      width: 36px; height: 36px;
+      background-image: url('./assets/ring2.svg');
+      background-size: contain;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    height: 72px;
+    width: 100%;
+    
+
+    >div {
+      background-color: white;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > div {
+        font-size: 16px;
+      }
+    }
+
+    > div:first-child{
+      margin-right: 2px;
+    }
+  }
+
 }
