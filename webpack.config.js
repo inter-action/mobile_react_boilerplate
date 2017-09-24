@@ -19,12 +19,9 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         use: ['babel-loader'],
-        exclude: [ path.resolve(__dirname, 'node_modules') ]
+        exclude: /node_modules/
       },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }, 
+
       {
         test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2|otf)$/,
         use: {

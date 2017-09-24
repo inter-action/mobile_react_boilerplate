@@ -17,7 +17,7 @@ module.exports = merge(config, {
         }),
       },
       {
-        test: /(\.scss$)|(\.css$)/,
+        test: /\.scss$/,
         use: extractText.extract({
           fallback: 'style-loader',
           use: [
