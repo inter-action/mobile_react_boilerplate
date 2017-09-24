@@ -5,6 +5,15 @@
           'last 3 version',
           'ie >= 11',
         ],
+    },
+    'postcss-pxtorem': {
+      rootValue: 3.75,
+      unitPrecision: 5,
+      propList: ['*'],
+      selectorBlackList: [],
+      replace: true,
+      mediaQuery: false,
+      minPixelValue: 0
     }
   }
 }
