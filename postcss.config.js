@@ -3,7 +3,7 @@
 module.exports = function (ctx) {
   let pxtorem =
     require('postcss-pxtorem')({
-      rootValue: 3.75,
+      rootValue: 37.5,
       unitPrecision: 5,
       propList: ['*'],
       selectorBlackList: [],
