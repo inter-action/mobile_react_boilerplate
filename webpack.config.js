@@ -9,7 +9,7 @@ let backlist = ['normalize.css', 'babel-runtime']
 const config = {
   entry: {
     main: './src',
-    vender: Object.keys(pkg.dependencies).filter(e=> backlist.indexOf(e) == -1),
+    vendor: Object.keys(pkg.dependencies).filter(e=> backlist.indexOf(e) == -1),
   },
   output: {
     path: path.resolve(__dirname, 'build'),
