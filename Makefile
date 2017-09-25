@@ -20,7 +20,7 @@ dev:
 	webpack-dev-server --config webpack.config.dev.js --progress
 
 prod: clean
-	webpack --config webpack.config.prod.js --progress
+	NODE_ENV=production webpack --config webpack.config.prod.js --progress
 
 # https://www.npmjs.com/package/http-server
 serve_prod:

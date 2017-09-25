@@ -11,21 +11,30 @@ module.exports = merge(config, {
     rules: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
+        use: extractText.extract({
+          use: [
+            {
+              loader: 'css-loader',
+              options: { importLoaders: 1 },
+            },
+            'postcss-loader',
+          ],
           fallback: 'style-loader',
-          use: ['style', 'css']
-        }),
+        })
       },
       {
         test: /\.scss$/,
         use: extractText.extract({
-          fallback: 'style-loader',
           use: [
-            'css-loader',
-            'resolve-url-loader',
+            {
+              loader: 'css-loader',
+              options: { importLoaders: 3 },
+            },
             'postcss-loader',
+            'resolve-url-loader',
             'sass-loader'
-          ]
+          ],
+          fallback: 'style-loader',
         }),
       }
     ]
