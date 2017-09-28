@@ -24,4 +24,4 @@ prod: clean
 
 # https://www.npmjs.com/package/http-server
 serve_prod:
-	http-server ./build -p 8080
+	http-server ./build -p 8081

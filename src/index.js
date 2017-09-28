@@ -14,7 +14,7 @@ let App = ()=>{
 
 
 const setRem = ()=>{
-  let docWidth = utils.dom.getDocWidth()
+  let docWidth = document.body.clientWidth
   if (docWidth > 1440){
     docWidth = 1440
   }
