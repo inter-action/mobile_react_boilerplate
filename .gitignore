@@ -8,4 +8,5 @@ package-lock.json
 yarn.lock
 todo.txt
 .DS_Store
+stats.json
 
