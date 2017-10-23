@@ -13,7 +13,8 @@ module.exports = merge(config, {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'postcss-loader', 'sass-loader'],
+        // resolve url loader's order is important
+        use: ['style-loader', 'css-loader', 'postcss-loader','resolve-url-loader', 'sass-loader'],
       }]
   },
   plugins: [

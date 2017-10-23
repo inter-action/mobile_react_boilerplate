@@ -4,15 +4,16 @@ const path = require('path')
 
 var pkg = require('./package.json')
 
+let backlist = ['normalize.css', 'babel-runtime']
 
 const config = {
   entry: {
     main: './src',
-    vender: Object.keys(pkg.dependencies).filter(e=> e !== 'babel-runtime'),
+    vendor: Object.keys(pkg.dependencies).filter(e=> backlist.indexOf(e) == -1),
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name].js',
+    filename: '[name]-[hash].js',
   },
   module: {
     rules: [
