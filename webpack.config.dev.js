@@ -14,10 +14,11 @@ module.exports = merge(config, {
       {
         test: /\.scss$/,
         // resolve url loader's order is important
-        use: ['style-loader', 'css-loader', 'postcss-loader','resolve-url-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'resolve-url-loader', 'sass-loader'],
       }]
   },
   plugins: [
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {

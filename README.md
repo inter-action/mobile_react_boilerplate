@@ -15,4 +15,4 @@ full functionality in [feature/project_scallfolding branch](https://github.com/i
     * autoprefixer
     * cssnano
     * pixeltorem
-
+* react HMR
