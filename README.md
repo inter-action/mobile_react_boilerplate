@@ -18,3 +18,4 @@ full functionality in [feature/project_scallfolding branch](https://github.com/i
 * react HMR
 * mobile adpative layout with vw
     * https://www.w3cplus.com/mobile/vw-layout-in-vue.html
+* code splitting

@@ -30,4 +30,4 @@ analyze:
 	
 # https://www.npmjs.com/package/http-server
 serve_prod:
-	http-server ./build -p 8081
+	http-server ./build -p 8084

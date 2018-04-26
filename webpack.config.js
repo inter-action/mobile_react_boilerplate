@@ -2,8 +2,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path')
 
-var pkg = require('./package.json')
-
+let pkg = require('./package.json')
 let backlist = ['normalize.css', 'babel-runtime']
 
 const config = {
@@ -13,7 +12,8 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name]-[hash].js',
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].chunk.[hash].js',
   },
   module: {
     rules: [
@@ -22,7 +22,6 @@ const config = {
         use: ['babel-loader'],
         exclude: /node_modules/
       },
-
       {
         test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2|otf)$/,
         use: {

@@ -1,7 +1,5 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractText = new ExtractTextPlugin('[name].[chunkhash].css')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const config = require('./webpack.config')
 
@@ -11,37 +9,17 @@ module.exports = merge(config, {
     rules: [
       {
         test: /\.css$/,
-        use: extractText.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: { importLoaders: 1 },
-            },
-            'postcss-loader',
-          ],
-          fallback: 'style-loader',
-        })
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.scss$/,
-        use: extractText.extract({
-          use: [
-            {
-              loader: 'css-loader',
-              options: { importLoaders: 3 },
-            },
-            'postcss-loader',
-            'resolve-url-loader',
-            'sass-loader'
-          ],
-          fallback: 'style-loader',
-        }),
-      }
-    ]
+        // resolve url loader's order is important
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'resolve-url-loader', 'sass-loader'],
+      }]
   },
 
   plugins: [
-    extractText,
+    // extractText,
     // Split dependencies into a `vendor` file and provide a manifest
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest'],
