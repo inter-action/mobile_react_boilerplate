@@ -24,6 +24,9 @@
     "no-unused-vars": [1, { "argsIgnorePattern": "^_" }],
     "no-console": [0, { "allow": ["warn", "error", "info"] }],
     "no-trailing-spaces": [0, { "skipBlankLines": true }],
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "no-extra-semi": 0
+  },
+  "globals": {
   }
 }
