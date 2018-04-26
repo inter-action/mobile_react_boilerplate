@@ -6,7 +6,6 @@ import App from './app'
 import 'normalize.css'
 import './styles/global.scss'
 
-
-window.addEventListener('DOMContentLoaded', ()=>{
+window.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<App />, document.querySelector('.app'))
 })

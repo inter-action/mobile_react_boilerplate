@@ -1,10 +1,8 @@
-
 .page-home {
   color: red;
   height: 100vh;
   position: relative;
   color: #2395ff;
-  
 
   .bg {
     display: flex;
@@ -18,12 +16,12 @@
       background-size: contain;
     }
 
-    > div:last-child{
+    > div:last-child {
       flex: 1;
       background-image: linear-gradient(to bottom, #ffffff, #f2fbff);
       background-size: contain;
-      
-      >div{
+
+      > div {
         margin-top: 100px;
         font-size: 26px;
         font-weight: bold;
@@ -38,8 +36,9 @@
     transform: translateY(-50%);
     width: 100%;
 
-    .ring0{
-      width: 140px; height: 140px;
+    .ring0 {
+      width: 140px;
+      height: 140px;
       background-image: url('./assets/ring0.svg');
       background-size: contain;
       display: flex;
@@ -48,8 +47,9 @@
       margin: 0 auto;
     }
 
-    .ring1{
-      width: 108px; height: 108px;
+    .ring1 {
+      width: 108px;
+      height: 108px;
       background-image: url('./assets/ring1.svg');
       background-size: contain;
       display: flex;
@@ -57,8 +57,9 @@
       align-items: center;
     }
 
-    .ring2{
-      width: 36px; height: 36px;
+    .ring2 {
+      width: 36px;
+      height: 36px;
       background-image: url('./assets/ring2.svg');
       background-size: contain;
     }
@@ -70,9 +71,8 @@
     display: flex;
     height: 72px;
     width: 100%;
-    
 
-    >div {
+    > div {
       background-color: white;
       flex: 1;
       display: flex;
@@ -84,9 +84,8 @@
       }
     }
 
-    > div:first-child{
+    > div:first-child {
       margin-right: 2px;
     }
   }
-
 }

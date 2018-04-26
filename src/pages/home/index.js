@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 import './styles.scss'
 
@@ -15,7 +15,7 @@ export class Home extends Component {
         <div className="scan">
           <div className="ring0">
             <div className="ring1">
-              <div className="ring2"></div>
+              <div className="ring2" />
             </div>
           </div>
         </div>
@@ -28,6 +28,6 @@ export class Home extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

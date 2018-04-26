@@ -1,11 +1,12 @@
-import {observable, action} from 'mobx'
+import { observable, action } from 'mobx'
 
 class CounterStore {
-	@observable counter = 0;
+  @observable counter = 0
 
-  @action increase(){
+  @action
+  increase() {
     this.counter++
   }
 }
 
-export const counterStore = new CounterStore();
+export const counterStore = new CounterStore()

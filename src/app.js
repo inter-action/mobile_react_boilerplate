@@ -1,11 +1,10 @@
-
 import React from 'react'
-import {Provider} from 'mobx-react'
+import { Provider } from 'mobx-react'
 import Routes from './routes'
 import { hot } from 'react-hot-loader'
 import * as store from './store'
 
-const App = ()=>{
+const App = () => {
   return (
     <Provider {...store}>
       <Routes />

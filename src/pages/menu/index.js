@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export class Menu extends Component {
   render() {
-    return (
-      <div>
-        menu
-      </div>
-    );
+    return <div>menu</div>
   }
 }

@@ -1,1 +1,1 @@
-export {counterStore} from './counter'
+export { counterStore } from './counter'
