@@ -17,7 +17,7 @@ clean:
 
 
 dev:
-	webpack-dev-server --config webpack.config.dev.js --progress
+	webpack-dev-server --config webpack.config.dev.js --progress --port 9001
 
 prod: clean
 	NODE_ENV=production webpack --config webpack.config.prod.js --progress
