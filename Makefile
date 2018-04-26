@@ -31,3 +31,9 @@ analyze:
 # https://www.npmjs.com/package/http-server
 serve_prod:
 	http-server ./build -p 8084
+
+
+prettier:
+	prettier "{src,__{tests,mocks}__}/**/*.js" --write
+	prettier "{src,__{tests,mocks}__}/**/*.scss" --write
+
