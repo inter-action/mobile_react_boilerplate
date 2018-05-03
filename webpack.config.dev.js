@@ -6,15 +6,7 @@ let config = require('./webpack.config')
 module.exports = merge(config, {
   mode: 'development',
   entry: ['react-hot-loader/patch', './src'],
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('development')
-      }
-    })
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     contentBase: './build',
 
@@ -22,7 +14,7 @@ module.exports = merge(config, {
     hot: true,
     inline: true,
     overlay: true,
-
+    compress: false,
     stats: 'errors-only',
 
     disableHostCheck: true,
