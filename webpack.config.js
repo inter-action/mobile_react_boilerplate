@@ -2,13 +2,9 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
-let pkg = require('./package.json')
-let backlist = ['normalize.css', 'babel-runtime']
-
 const config = {
   entry: {
-    main: './src',
-    vendor: Object.keys(pkg.dependencies).filter(e => backlist.indexOf(e) == -1)
+    main: './src'
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -35,6 +31,24 @@ const config = {
             limit: '10000'
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        // resolve url loader's order is important
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 3 }
+          },
+          'postcss-loader',
+          'resolve-url-loader',
+          'sass-loader'
+        ]
       }
     ]
   },

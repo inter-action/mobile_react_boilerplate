@@ -4,20 +4,8 @@ let merge = require('webpack-merge')
 let config = require('./webpack.config')
 
 module.exports = merge(config, {
+  mode: 'development',
   entry: ['react-hot-loader/patch', './src'],
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
-        test: /\.scss$/,
-        // resolve url loader's order is important
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'resolve-url-loader', 'sass-loader']
-      }
-    ]
-  },
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
