@@ -18,8 +18,8 @@
     "node": true
   },
   "rules": {
-    "react/jsx-uses-react": 1,
-    "react/jsx-uses-vars": 1,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
     "no-empty": 1,
     "no-unused-vars": [2, { "argsIgnorePattern": "^_" }],
     "no-console": [0, { "allow": ["warn", "error", "info"] }],
